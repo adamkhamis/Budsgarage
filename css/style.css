@@ -873,69 +873,10 @@ h1, h2, h3, h4 {
   padding: 36px;
 }
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.field {
-  margin-bottom: 20px;
-}
-
-.field label {
-  display: block;
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--text-dim);
-}
-
-.field input,
-.field select,
-.field textarea {
-  width: 100%;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 12px 14px;
-  color: var(--text);
-  font-size: 0.95rem;
-  font-family: inherit;
-  transition: border-color 0.2s ease;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.field textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
 .form-note {
   font-size: 0.82rem;
   color: var(--text-dim);
   margin-top: 14px;
-}
-
-.form-success {
-  display: none;
-  background: rgba(62, 207, 142, 0.12);
-  border: 1px solid rgba(62, 207, 142, 0.4);
-  color: var(--success);
-  padding: 14px 18px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
-
-.form-success.visible {
-  display: block;
 }
 
 /* ---------- Footer ---------- */
@@ -1127,8 +1068,7 @@ h1, h2, h3, h4 {
   .grid-4,
   .grid-2,
   .values-grid,
-  .service-list,
-  .form-row {
+  .service-list {
     grid-template-columns: 1fr;
   }
 

@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   injectFooter();
   setupNavToggle();
-  setupQuoteForm();
+  setupAriBookingResize();
 });
 
 function injectFooter() {
@@ -78,43 +78,13 @@ function setupNavToggle() {
   });
 }
 
-function setupQuoteForm() {
-  var form = document.getElementById("quote-form");
-  if (!form) return;
+function setupAriBookingResize() {
+  var iframe = document.getElementById("ari-booking");
+  if (!iframe) return;
 
-  var successBox = document.getElementById("form-success");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    var name = form.name.value.trim();
-    var phone = form.phone.value.trim();
-    var email = form.email.value.trim();
-    var vehicle = form.vehicle.value.trim();
-    var serviceType = form["service-type"].value;
-    var message = form.message.value.trim();
-
-    var subject = "Quote Request from " + name + " (" + serviceType + ")";
-    var body =
-      "Name: " + name + "\n" +
-      "Phone: " + phone + "\n" +
-      "Email: " + email + "\n" +
-      "Vehicle: " + (vehicle || "N/A") + "\n" +
-      "Service Type: " + serviceType + "\n\n" +
-      "Message:\n" + message;
-
-    var mailtoLink =
-      "mailto:info@budsgarage.ca" +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-
-    window.location.href = mailtoLink;
-
-    if (successBox) {
-      successBox.classList.add("visible");
-      successBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  window.addEventListener("message", function (e) {
+    if (e.data && e.data.type === "ari-booking-resize") {
+      iframe.style.height = e.data.height + "px";
     }
-
-    form.reset();
   });
 }
