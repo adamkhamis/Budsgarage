@@ -768,6 +768,25 @@ h1, h2, h3, h4 {
 
 /* ---------- Contact page ---------- */
 
+.entrance-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 106, 26, 0.1);
+  border: 1px solid rgba(255, 106, 26, 0.35);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 18px;
+  color: var(--accent-light);
+  font-size: 0.9rem;
+}
+
+.entrance-notice svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

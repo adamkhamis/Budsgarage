@@ -1,4 +1,4 @@
-// Bud's Garage — site scripts
+// Bud's Garage site scripts
 
 document.addEventListener("DOMContentLoaded", function () {
   injectFooter();
