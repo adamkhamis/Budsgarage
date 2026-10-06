@@ -573,32 +573,34 @@ h1, h2, h3, h4 {
   font-size: 0.92rem;
 }
 
-/* ---------- Testimonials ---------- */
+/* ---------- Reviews ---------- */
 
-.testimonial {
+.reviews-col {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 30px;
   box-shadow: 0 2px 10px rgba(16, 19, 26, 0.05);
+  text-align: center;
 }
 
-.testimonial .stars {
-  color: var(--stars);
-  margin-bottom: 14px;
-  letter-spacing: 3px;
-}
-
-.testimonial p.quote {
-  color: var(--text);
-  font-size: 0.98rem;
+.reviews-col h3 {
+  font-size: 1.25rem;
   margin-bottom: 18px;
 }
 
-.testimonial .author {
+.reviews-widget-slot {
+  min-height: 60px;
+  margin-bottom: 20px;
+}
+
+.reviews-widget-slot:empty::before {
+  content: "Google reviews widget will appear here once connected.";
+  display: block;
   color: var(--text-dim);
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-style: italic;
+  padding: 16px 0;
 }
 
 /* ---------- CTA band ---------- */
