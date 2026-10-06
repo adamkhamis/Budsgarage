@@ -50,7 +50,7 @@ function injectFooter() {
           "<h4>Contact</h4>" +
           "<ul>" +
             '<li><a href="https://maps.app.goo.gl/8T1ZGSy6QRMyx3216" target="_blank" rel="noopener">3689 Trinity Street, Vancouver, BC</a></li>' +
-            '<li style="color:var(--on-dark-dim); font-size:0.85rem;">Entrance is in the back alley</li>' +
+            '<li style="color:var(--on-dark-dim); font-size:0.85rem;">Entrance is in the alley between Trinity and Yale St</li>' +
             '<li><a href="tel:+17788193705">(778) 819-3705</a></li>' +
             '<li><a href="mailto:info@budsgarage.ca">info@budsgarage.ca</a></li>' +
           "</ul>" +
